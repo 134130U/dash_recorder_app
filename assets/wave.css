@@ -1,0 +1,84 @@
+/*@keyframes pulse {*/
+/*  0% { transform: scaleY(0.3); }*/
+/*  50% { transform: scaleY(1); }*/
+/*  100% { transform: scaleY(0.3); }*/
+/*}*/
+
+/*.wave-container {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: flex-end;*/
+/*  height: 40px;*/
+/*  gap: 6px;*/
+/*}*/
+
+/*.wave-bar {*/
+/*  width: 300px;*/
+/*  height: 10px;*/
+/*  background-color: #0d6efd;*/
+/*  animation: pulse 1s infinite ease-in-out;*/
+/*}*/
+
+/*.wave-bar:nth-child(2) { animation-delay: 0.1s; }*/
+/*.wave-bar:nth-child(3) { animation-delay: 0.2s; }*/
+/*.wave-bar:nth-child(4) { animation-delay: 0.3s; }*/
+/*.wave-bar:nth-child(5) { animation-delay: 0.4s; }*/
+
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.wave-segment {
+  width: 300px;
+  background-color: #0d6efd;
+  border-radius: 1px;
+  transition: height 0.2s ease;
+}
+
+/* Animated pulse for a fake live recording effect */
+@keyframes pulse {
+  0%   { transform: scaleY(0.3); }
+  50%  { transform: scaleY(1); }
+  100% { transform: scaleY(0.3); }
+}
+
+.wave-segment.animate {
+  animation: pulse 1s infinite ease-in-out;
+  transform-origin: bottom;
+}
+
+
+@keyframes pulse {
+  0% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.3); }
+}
+
+.wave-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 40px;
+  gap: 6px;
+}
+
+.wave-bar2 {
+  width: 300px;
+  height: 10px;
+  background-color: #0d6efd;
+}
+
+/* animate only if class 'animate' is applied */
+.wave-bar2.animate {
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.wave-bar.animate:nth-child(2) { animation-delay: 0.1s; }
+.wave-bar.animate:nth-child(3) { animation-delay: 0.2s; }
+.wave-bar.animate:nth-child(4) { animation-delay: 0.3s; }
+.wave-bar.animate:nth-child(5) { animation-delay: 0.4s; }
